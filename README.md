@@ -1,7 +1,7 @@
 # WeatherDemo
 
 WeatherDemo is a demo project demonstrating skills in frontend and backend programming. This is the backend part, 
-the frontend can be found [here](https://github.com/jhameenaho/weather-demo-backend).
+the frontend can be found [here](https://github.com/jhameenaho/weather-demo-frontend).
 
 ### General info
 
