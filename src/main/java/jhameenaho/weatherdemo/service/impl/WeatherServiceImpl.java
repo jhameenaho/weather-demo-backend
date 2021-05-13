@@ -57,10 +57,10 @@ public class WeatherServiceImpl implements WeatherService {
     @Override
     public Weather getWeatherData(String query) {
         URI uri = UriComponentsBuilder.fromHttpUrl(weatherApiUrl)
-                .queryParam("APPID", weatherApiKey)
+                .queryParam("q", query)
+                .queryParam("appid", weatherApiKey)
                 .queryParam("mode", weatherApiMode)
                 .queryParam("units", weatherApiUnits)
-                .queryParam("q", query)
                 .build().toUri();
         
         ObjectMapper mapper = new XmlMapper();

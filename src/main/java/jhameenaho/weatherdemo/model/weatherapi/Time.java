@@ -1,5 +1,7 @@
 package jhameenaho.weatherdemo.model.weatherapi;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+
 import java.util.Date;
 
 public class Time {           
@@ -9,10 +11,15 @@ public class Time {
     private Precipitation precipitation;
     private WindDirection windDirection;
     private WindSpeed windSpeed;
+    private WindGust windGust;
     private Temperature temperature;
+
+    @JacksonXmlProperty(localName = "feels_like")
+    private FeelsLike feelsLike;
     private Pressure pressure;
     private Humidity humidity;
     private Clouds clouds;
+    private Visibility visibility;
 
     public Date getFrom() {
         return from;
@@ -62,12 +69,28 @@ public class Time {
         this.windSpeed = windSpeed;
     }
 
+    public WindGust getWindGust() {
+        return windGust;
+    }
+
+    public void setWindGust(WindGust windGust) {
+        this.windGust = windGust;
+    }
+
     public Temperature getTemperature() {
         return temperature;
     }
 
     public void setTemperature(Temperature temperature) {
         this.temperature = temperature;
+    }
+
+    public FeelsLike getFeelsLike() {
+        return feelsLike;
+    }
+
+    public void setFeelsLike(FeelsLike feelsLike) {
+        this.feelsLike = feelsLike;
     }
 
     public Pressure getPressure() {
@@ -92,5 +115,13 @@ public class Time {
 
     public void setClouds(Clouds clouds) {
         this.clouds = clouds;
+    }
+
+    public Visibility getVisibility() {
+        return visibility;
+    }
+
+    public void setVisibility(Visibility visibility) {
+        this.visibility = visibility;
     }
 }

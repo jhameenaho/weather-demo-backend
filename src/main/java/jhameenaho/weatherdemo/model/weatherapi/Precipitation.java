@@ -1,9 +1,18 @@
 package jhameenaho.weatherdemo.model.weatherapi;
 
 public class Precipitation {
+    private Double probability;
     private String unit;
     private Double value;
     private String type;
+
+    public Double getProbability() {
+        return probability;
+    }
+
+    public void setProbability(Double probability) {
+        this.probability = probability;
+    }
 
     public String getUnit() {
         return unit;
